@@ -23,10 +23,10 @@ const DocumentViewer = (props) => {
             <div className='DocumentViewer__content' style={{backgroundColor: highlightedField == title ? colorMap[title] : null}}>
                 <span>
                     <strong>
-                        {formatTitle(title)}:
+                        {formatTitle(title)}
                     </strong>
                 </span>
-                {' '}
+                {': '}
                 <span>{typeof value === 'string' || typeof value === 'number' ? value : ''}</span>
             </div>
         ));
