@@ -1,0 +1,40 @@
+.DocumentViewer {
+    width: 210mm; 
+    height: calc(100vh - 40px); 
+    background-color: white;
+    border: 1px solid black; 
+    overflow: scroll; 
+    margin: 10px auto;
+}
+
+.DocumentViewer__content {
+    margin: 8px 0;
+    padding: 5px;
+    display: table;
+    border-radius: 4px;
+    span {
+        display: inline-flex;
+    }
+}
+
+.content {
+    padding: 20px;
+}
+  
+.zoom-controls {
+    position: fixed;
+    top:30px;
+    left: 30px;
+    button{
+        display: block;
+        margin: 10px 0;
+        padding: 10px;
+        width: 30px;
+        font-weight: bold;
+    }
+}
+  
+.zoom-controls button {
+    margin-right: 5px;
+}
+  

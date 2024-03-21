@@ -1,22 +1,19 @@
-import React, {useState}  from 'react';
+import React  from 'react';
 import FieldContainer from './FieldContainer';
 
 const Sidebar = (props) => {
-    const [currentField, setCurrentField] = useState(0)
-
-    const switchData = () => {
-        if (currentField != props.sections.length)
-            setCurrentField(currentField + 1)
-        else 
-            setCurrentField(0)
-    }
-
+    const { onFieldChange, colorMap, setHighlightField} = props;
     const renderFields = (sections) => {
         if (sections.length != 0) {
-            const currentSection = sections[currentField]
-            console.log(currentSection)
+            const currentSection = sections[props.currentField]
             return Object.entries(currentSection).map(([title, value]) => (
-                <FieldContainer title={title} value={value} />
+                <FieldContainer 
+                title={title} 
+                value={value} 
+                onFieldChange={onFieldChange}
+                colorMap={colorMap}
+                setHighlightField={setHighlightField}
+                />
             ));
         }
         return null;   
@@ -26,8 +23,8 @@ const Sidebar = (props) => {
     
     return (
         <div className='Sidebar'>
-            <span>Fields</span>
-            <button onClick={switchData}>Next Field</button>
+            <h1>Fields</h1>
+            <button onClick={props.switchData}>Next Field</button>
             {fields}
         </div>
     )

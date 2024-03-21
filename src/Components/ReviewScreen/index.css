@@ -7,8 +7,9 @@
 
 .ReviewScreen__previewer {
     flex: 75;
-    background-color: aliceblue;
+    background-color: rgb(62, 62, 62);
     border-right: 10px solid rgb(62, 62, 62);
+    overflow: scroll;
 }
 
 .ReviewScreen__sidebar {
@@ -20,7 +21,20 @@
     overflow: scroll;
 }
 
-/* Field Container*/
+/* Sidebar */
+.Sidebar {
+    h1{
+        float: left;
+        margin: 8px 0;
+    }
+    button {
+        margin: 10px 0;
+        padding: 4px 6px;
+        float: right;
+    }
+}
+
+/* Field Container */
 .FieldContainer {
     color: white;
     margin: 10px 0;
@@ -28,17 +42,30 @@
     width: 100%;
     background-color: rgb(62, 62, 62);;
     display: flex;
+    cursor: pointer;
 }
 
 .FieldContainer__col {
     flex: 50;
+    display: flex;
 }
 
 .FieldContainer__logo {
-    height: 30px;
-    width: 30px;
-    padding: 4px 3px;
+    height: 35px;
+    width: 35px;
+    float: left;
+    padding: 6px 6px;
+    margin: 0 4px 0 0;
     text-align: center;
     border-radius: 2px;
-    filter: brightness(80%)
+    filter: brightness(80%);
+}
+
+.FieldContainer__content {
+    margin-left: 8px;
+    width: 100%;
+}
+
+.FieldContainer__content--title {
+    margin: 0 0 15px 0;
 }
